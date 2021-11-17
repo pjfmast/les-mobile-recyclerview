@@ -14,6 +14,13 @@ class MovieAdapter(
     private val layoutInflater: LayoutInflater,
 ) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
+    private val movieData = mutableListOf<MovieUiModel>()
+    fun setData(catsData: List<MovieUiModel>) {
+        this.movieData.clear()
+        this.movieData.addAll(catsData)
+        notifyDataSetChanged()
+    }
+
     inner class MovieViewHolder(
         containerView: View,
     ) : RecyclerView.ViewHolder(containerView) {
@@ -37,7 +44,5 @@ class MovieAdapter(
         TODO("Not yet implemented")
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount(): Int = movieData.size
 }
