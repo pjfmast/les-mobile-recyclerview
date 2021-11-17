@@ -1,5 +1,6 @@
 package com.avans.avd.lesrecyclerview.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,10 +16,18 @@ class MovieAdapter(
     private val imageLoader: ImageLoader
 ) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
+    companion object {
+        // indien je aantal aanroepen van onCreateViewHolder en onBindViewHolder wil testen:
+        // - maak de collectie van items minstens 2 keer zo groot dan zichtbaar in de View
+        private val TAG = MovieAdapter::class.qualifiedName
+        private var onCreateNr = 0
+        private var onBindNr = 0
+    }
+
     private val movieData = mutableListOf<MovieUiModel>()
     fun setData(catsData: List<MovieUiModel>) {
         this.movieData.clear()
-        this.movieData.addAll(catsData)
+        this.movieData.addAll(catsData + catsData) // for testing nr of calls ensure enough data
         notifyDataSetChanged()
     }
 
@@ -37,12 +46,16 @@ class MovieAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
+        // wordt maximaal: aantal items op scherm + 3 boven en 3 onder
+        Log.i(TAG, "onCreateViewHolder: called ${++onCreateNr}")
         val view = layoutInflater.inflate(R.layout.item_movie, parent, false)
         return  MovieViewHolder(view)
     }
 
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
+        // aantal wordt steeds hoger als we op en neer scrollen:
+        Log.i(TAG, "onBindViewHolder: called ${++onBindNr}")
         holder.bindData(movieData[position])
     }
 
