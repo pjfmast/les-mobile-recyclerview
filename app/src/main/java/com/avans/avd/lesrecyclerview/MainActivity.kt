@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.avans.avd.lesrecyclerview.adapter.CatsAdapter
+import com.avans.avd.lesrecyclerview.adapter.MovieAdapter
 import com.avans.avd.lesrecyclerview.data.TestDatasources
 import com.avans.avd.lesrecyclerview.uitl.CoilImageLoader
 
@@ -19,9 +20,14 @@ class MainActivity : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.main_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
-        // connect adapter to recyclerview:
-        val catsAdapter = CatsAdapter(layoutInflater, CoilImageLoader())
-        catsAdapter.setData(TestDatasources().loadCats())
-        recyclerView.adapter = catsAdapter
+        // connect Cat-adapter to recyclerview:
+//        val catsAdapter = CatsAdapter(layoutInflater, CoilImageLoader())
+//        catsAdapter.setData(TestDatasources().loadCats())
+//        recyclerView.adapter = catsAdapter
+
+        // connect movie-adapter to recyclerview:
+        val movieAdapter = MovieAdapter(layoutInflater)
+        movieAdapter.setData(TestDatasources().loadMovies())
+        recyclerView.adapter = movieAdapter
     }
 }

@@ -40,6 +40,27 @@ class TestDatasources {
                 "tt1605783",
                 "movie",
                 "https://m.media-amazon.com/images/M/MV5BMTM4NjY1MDQwMl5BMl5BanBnXkFtZTcwNTI3Njg3NA@@._V1_SX300.jpg"
+            ),
+            MovieUiModel(
+                "From Paris with Love",
+                2010,
+                "tt1179034",
+                "movie",
+                "https://m.media-amazon.com/images/M/MV5BODAwMDFjNjktMWY2Mi00MmVhLWI0MjYtNzg4OTI0NzA5YzBjXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg"
+            ),
+            MovieUiModel(
+                "Paris, Texas",
+                1984,
+                "tt0087884",
+                "movie",
+                "https://m.media-amazon.com/images/M/MV5BM2RjMmU3ZWItYzBlMy00ZmJkLWE5YzgtNTVkODdhOWM3NGZhXkEyXkFqcGdeQXVyNDA5Mjg5MjA@._V1_SX300.jpg"
+            ),
+            MovieUiModel(
+                "Paris, je t'aime",
+                2006,
+                "tt0401711",
+                "movie",
+                "https://m.media-amazon.com/images/M/MV5BMTc1MDgwNDE4MF5BMl5BanBnXkFtZTcwMTQzMzc0MQ@@._V1_SX300.jpg"
             )
         )
     }
