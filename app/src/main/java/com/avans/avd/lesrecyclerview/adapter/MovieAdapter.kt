@@ -36,12 +36,13 @@ class MovieAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
-        TODO("Not yet implemented")
+        val view = layoutInflater.inflate(R.layout.item_movie, parent, false)
+        return  MovieViewHolder(view)
     }
 
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.bindData(movieData[position])
     }
 
     override fun getItemCount(): Int = movieData.size
