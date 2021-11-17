@@ -61,6 +61,55 @@ class TestDatasources {
                 "tt0401711",
                 "movie",
                 "https://m.media-amazon.com/images/M/MV5BMTc1MDgwNDE4MF5BMl5BanBnXkFtZTcwMTQzMzc0MQ@@._V1_SX300.jpg"
+            ),
+            MovieUiModel(
+                "Emily in Paris",
+                2020,
+                "tt8962124",
+                "series",
+                "https://m.media-amazon.com/images/M/MV5BYTFjZjQzZDgtOWEyNy00YmY1LTgyYjQtMTBlODUxZTBiZWRkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
+            ),
+            MovieUiModel(
+                "An American in Paris",
+                1951,
+                "tt0043278",
+                "movie",
+                "https://m.media-amazon.com/images/M/MV5BMzFkNGM0YTUtZjY5Ny00NzBkLWE1NTAtYzUxNjUyZmJlODMwL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+            ),
+            MovieUiModel(
+                "The 15:17 to Paris",
+                2018,
+                "tt6802308",
+                "movie",
+                "https://m.media-amazon.com/images/M/MV5BMTY0NjUzNjYwOV5BMl5BanBnXkFtZTgwMzY1MDM0NDM@._V1_SX300.jpg"
+            ),
+            MovieUiModel(
+                "2 Days in Paris",
+                2007,
+                "tt0841044",
+                "movie",
+                "https://m.media-amazon.com/images/M/MV5BMjAyNTY3NTcyOF5BMl5BanBnXkFtZTcwMTcyMjM1MQ@@._V1_SX300.jpg"
+            ),
+            MovieUiModel(
+                "Un monstre à Paris",
+                2001,
+                "tt0961097",
+                "movie",
+                "https://m.media-amazon.com/images/M/MV5BMTgxNTg3MTE1NF5BMl5BanBnXkFtZTcwODI4NzgzNw@@._V1_SX300.jpg"
+            ),
+            MovieUiModel(
+                "An American Werewolf in Paris",
+                1997,
+                "tt0118604",
+                "movie",
+                "https://m.media-amazon.com/images/M/MV5BOGU0ZmE5NzUtYWY0Yi00NDZjLWI4Y2UtZDdkNDFjMmNkM2MxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+            ),
+            MovieUiModel(
+                "Not found movie of Paris",
+                2099,
+                "ttxyz",
+                "movie",
+                "https://notaparismovie/images/noimage"
             )
         )
     }

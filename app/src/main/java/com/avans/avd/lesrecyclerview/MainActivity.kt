@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 //        recyclerView.adapter = catsAdapter
 
         // connect movie-adapter to recyclerview:
-        val movieAdapter = MovieAdapter(layoutInflater)
+        val movieAdapter = MovieAdapter(layoutInflater, CoilImageLoader())
         movieAdapter.setData(TestDatasources().loadMovies())
         recyclerView.adapter = movieAdapter
     }

@@ -6,12 +6,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
 import com.avans.avd.lesrecyclerview.R
 import com.avans.avd.lesrecyclerview.model.MovieUiModel
+import com.avans.avd.lesrecyclerview.uitl.ImageLoader
 
 class MovieAdapter(
     private val layoutInflater: LayoutInflater,
+    private val imageLoader: ImageLoader
 ) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
     private val movieData = mutableListOf<MovieUiModel>()
@@ -31,7 +32,7 @@ class MovieAdapter(
         fun bindData(movieData: MovieUiModel){
             movieTitle.text = "${movieData.title} (${movieData.year})"
             movieType.text = movieData.type
-            moviePoster.load(movieData.poster)
+            imageLoader.loadImage(movieData.poster, moviePoster)
         }
     }
 
