@@ -2,6 +2,7 @@ package com.avans.avd.lesrecyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.avans.avd.lesrecyclerview.adapter.CatsAdapter
@@ -18,7 +19,9 @@ class MainActivity : AppCompatActivity() {
 
         // set recyclerview layout:
         val recyclerView: RecyclerView = findViewById(R.id.main_recycler_view)
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        recyclerView.setHasFixedSize(true)
+//        recyclerView.layoutManager = GridLayoutManager(this,2)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
         // connect Cat-adapter to recyclerview:
 //        val catsAdapter = CatsAdapter(layoutInflater, CoilImageLoader())
