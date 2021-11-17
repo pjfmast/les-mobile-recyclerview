@@ -32,4 +32,15 @@ class TestDatasources {
                 )
     }
 
+    fun loadMovies(): List<MovieUiModel> {
+        return listOf(
+            MovieUiModel(
+                "Midnight in Paris",
+                2011,
+                "tt1605783",
+                "movie",
+                "https://m.media-amazon.com/images/M/MV5BMTM4NjY1MDQwMl5BMl5BanBnXkFtZTcwNTI3Njg3NA@@._V1_SX300.jpg"
+            )
+        )
+    }
 }
